@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.fragments.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/button_gradient"
+                android:text="@string/search_button"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_outline_search_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_populares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_home"
+                android:fontFamily="@font/rubik_light"
+                android:text="@string/subtitle_popular"
+                android:textSize="@dimen/subtitle_size"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/btn_search"
+                app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/margin_top_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/btn_search"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_populares">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_subtitle_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_home"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="@string/subtitle_top"
+                android:textSize="@dimen/subtitle_size"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/rv_top"
+                app:layout_constraintStart_toStartOf="@+id/tv_subtitle_populares"
+                app:layout_constraintTop_toBottomOf="@+id/rv_popular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/margin_top_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_top" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_home"
+                android:fontFamily="@font/rubik_light"
+                android:text="@string/subtitle_action"
+                android:textSize="@dimen/subtitle_size"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/tv_subtitle_populares"
+                app:layout_constraintTop_toBottomOf="@+id/rv_top" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_top_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_action" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_home"
+                android:fontFamily="@font/rubik_light"
+                android:text="@string/subtitle_animation"
+                android:textSize="@dimen/subtitle_size"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/tv_subtitle_populares"
+                app:layout_constraintTop_toBottomOf="@+id/rv_action" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_animation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/margin_top_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_animation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

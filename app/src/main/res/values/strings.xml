@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TVSeries</string>
+    <string name="iv_content_description_serie">imagem da serie</string>
+    <string name="title_serie">Séries</string>
+    <string name="subtitle_popular">Populares</string>
+    <string name="subtitle_top">Mais votadas</string>
+    <string name="subtitle_action">Ação e aventura</string>
+    <string name="hint_search">Digite o nome da série</string>
+    <string name="subtitle_animation">Animações</string>
+    <string name="no_resume">Não encontramos o resumo da série selecionada</string>
+    <string name="title_temporadas">Temporadas</string>
+    <string name="title_episodios">Episódios</string>
+    <string name="search_button">Buscar</string>
+    <string name="enter">Entrar</string>
+</resources>
